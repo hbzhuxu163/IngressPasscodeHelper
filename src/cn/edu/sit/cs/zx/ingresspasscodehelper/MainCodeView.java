@@ -297,8 +297,11 @@ public class MainCodeView extends Activity {
 			
 			for (HashMap<String, String> iteMap : mCodesMap) { 
 				Date date = new Date();
-				int m = (int) ((date.getTime()/1000 - Long.parseLong(iteMap.get("time")))/60)+1;
-				iteMap.put("desc", String.valueOf(m)+"分钟前 "+iteMap.get("item"));
+				Log.d(TAG,"time of code:"+iteMap.get("time"));
+				
+				Long long1 = Long.parseLong(iteMap.get("time"));
+				int m = (int) ((date.getTime()/1000 - long1)/60)+1;
+				iteMap.put("desc", String.valueOf(m)+"分钟前 ["+iteMap.get("point")+"] "+iteMap.get("item"));
 	         } 
 
 			// 操作界面
@@ -312,12 +315,6 @@ public class MainCodeView extends Activity {
 			new String[] { "code", "desc" }, new int[] {
 					android.R.id.text1, android.R.id.text2 }));
 
-//			for (HashMap<String, String> codeInfo : mCodesMap) {
-//				if(CodeHistryCheck(codeInfo.get("item")))
-//				{
-//					//notify
-//				}
-//			}
 			//Log.d(TAG, String.valueOf(mCodes.length));
 			if (mCodesMap.size() > 0) {
 				SaveToClipboard(mCodesMap.get(0).get("item"));
@@ -369,6 +366,8 @@ public class MainCodeView extends Activity {
 							HashMap<String, String> iteMap = new HashMap<String, String>();
 							iteMap.put("code", object.getString("code"));
 							iteMap.put("item", object.getString("item"));
+							iteMap.put("time", object.getString("time"));
+							iteMap.put("point", object.getString("point"));
 							mCodesMap.add(iteMap);
 						}
 					} catch (JSONException e) {
