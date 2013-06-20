@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_help_1" android:numericShortcut="1" android:title="@string/activity_main_code_menu_help_text1"></item>
+    <item android:id="@+id/menu_help_2" android:numericShortcut="2" android:title="@string/activity_main_code_menu_help_text2"></item>
+    
+
+</menu>
