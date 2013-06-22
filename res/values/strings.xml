@@ -4,7 +4,11 @@
     <string name="app_name">码非码</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content"> </string>
-    <string name="activity_main_code_menu_help_text1">长按界面抓取code列表（联网）</string>
-    <string name="activity_main_code_menu_help_text2">长按code拷贝到剪贴板</string>
-
+    <string name="activity_main_code_menu_help_text1">长按code拷贝到剪贴板</string>
+    <string name="activity_main_code_menu_help_text2"></string>
+    <string name="activity_main_code_menu_background_notify">后台提醒    <string name="activity_main_code_menu_help_text2"></string>
+            <string name="activity_main_code_menu_help_text2"></string>
+        </string>
+    <string name="service_passcode_fetch_notify_title">New code coming!</string>
+    
 </resources>
